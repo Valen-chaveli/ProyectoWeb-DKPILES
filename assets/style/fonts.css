@@ -1,0 +1,43 @@
+/*-------------------- | HELVETICA | ----------------------*/
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/Helvetica.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url("../fonts/Helvetica-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Helvetica-Oblique";
+    src: url("../fonts/Helvetica-Oblique.ttf") format("truetype");
+}
+/*-------------------------------------------------------------*/
+
+/*-------------------- | FINLAND | ----------------------*/
+@font-face {
+    font-family: "Finland";
+    src: url("../fonts/Finland-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Finland-Rounded";
+    src: url("../fonts/Finland-Rounded-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Finland-Bold";
+    src: url("../fonts/Finland-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Finland-Bold-Italic";
+    src: url("../fonts/Finland-Bold-Italic.otf") format("opentype");
+}
+
+/*-------------------------------------------------------------*/
+
