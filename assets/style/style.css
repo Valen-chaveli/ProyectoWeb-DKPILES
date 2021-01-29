@@ -1,8 +1,226 @@
 @charset "UTF-8";
 
+/*RESET*/
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    line-height: 1;
+}
+
+/*----- MOBILE ----*/
+:root {
+    font-family: "Helvetica", "Arial", Verdana, Tahoma, sans-serif;
+    font-size: 14px;
+    height: 100vh;
+
+    /*Variables*/
+    --first-color: #66A5AD;
+    --first-alpha-color:rgba(102, 165, 173, 0.75);
+    --second-alpha-color:rgba(7, 87, 91, 0.75);
+    --third-color : #003B46;
+    --third-alpha-color:rgba(0, 59, 70, 0.75);
+    --contrast-color:#E6853C;
+    --second-contrast-color:#994809;
+    --white-color: #fff;
+
+    --text-color: #222;
+    --title-color: #07575B;
+    --link-color: var(--contrast-color);
+    --title-font : "Finland-Bold";
+}
+
+a, a:active, a:link {
+    color: black;
+}
+
+.menu-close {
+    display: none !important;
+}
+
+#header {
+    border: 1px solid red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "lg";
+}
+
+#wrap-logo {
+    grid-area: lg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#wrap-logo img {
+    width: 80px;
+}
+
+#nav-desktop {
+    width: 100%;
+    grid-area: nv;
+    display: none;
+    
+}
+
+#nav-desktop #wrap-items-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#nav-desktop #wrap-items-desktop .item-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15%;
+}
+
+#nav-desktop #wrap-items-desktop span:last-of-type:hover {
+    background-color: red;
+    position: relative;
+}
+
+#nav-desktop #wrap-items-desktop span:last-of-type ul{
+    position: absolute;
+    z-index: 600;
+    margin-top: 0.1rem;
+    background-color: red;
+    display: none;
+}
+
+#nav-desktop img{
+    width: 50px;
+}
+
+.menu-open {
+    
+    display: block;
+}
+
+#wrap-items {
+    transition: all 1.5s ease;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--first-color);
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+#wrap-items span.wrap-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#wrap-items span.wrap-item a {
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#wrap-items span.wrap-item a:hover {
+    background-color: var(--second-alpha-color);
+}
+
+#wrap-items span.wrap-item a:active {
+    background-color: var(--third-alpha-color)
+}
 
 
-body {
-    font-family:"Finland";
-    font-size: 50px;
+#wrap-logo img {}
+
+.hamburger {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+   
+}
+
+#wrap-img-principal {
+    width: 100%;
+    position: relative;
+}
+
+#wrap-message {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Finland-Bold";
+    font-size: 24px;
+    color: var(--white-color);
+    text-shadow: 1px 1px 1px black;
+}
+
+#wrap-img-principal img{
+    width: 100%;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#info-meteo-section {
+    border: 1px solid black;
+    text-align: center;
+    color: var(--title-color);
+}
+
+#wrap-webcams {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 16px;
+    }
+    
+    #nav-desktop {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    #nav-desktop #wrap-items-desktop .item-desktop {
+        font-size: 50px;
+    }
+    
+    #wrap-message {
+        font-size: 4.5rem;
+    }
+
+    #wrap-logo img {
+        width: 200px;
+    }
+
+    #header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lg nv nv nv nv nv";
+    }
+    #nav {
+        display: none;
+    }
+
 }

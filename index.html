@@ -7,6 +7,7 @@
     <meta name="keywords" content="kitesurf, club, surf, playa, surfing"/>
     <meta name="author" content="Valentin Chaveli Moreno" />
     <title>DK PILES</title>
+    <link rel="stylesheet" href="./assets/style/hamburgers.css">
 
     <link rel="stylesheet" href="./assets/style/fonts.css">
 
@@ -14,29 +15,96 @@
     <link rel="stylesheet" href="./assets/style/style.css">
 
 </head>
-<body>
+<body id="inicio">
     <header id="header">
-        <div class="wrap-logo">
+        <div id="wrap-logo">
             <img src="./assets/img/iconoWeb.png" alt="DK PILES">
         </div>
-        <nav id="nav">
-            <span class="wrap-items">
-                <img src="" alt="">
-                <a href="">Inicio</a>
-            </span>
-            <span class="wrap-items">
-                <img src="" alt="">
-                <a href="">Club</a>
-            </span>
-            <span class="wrap-items">
-                <img src="" alt="">
-                <a href="">Noticias y eventos</a>
-            </span>
-            <span class="wrap-items">
-                <img src="" alt="">
-                <a href="">Contacto</a>
-            </span>
-        </nav>
+        <nav id="nav-desktop">
+            <div id="wrap-items-desktop">
+                    <a href="#inicio" class="item-desktop">
+                        <img src="./assets/img/surfboard.svg" alt="">
+                        Inicio
+                    </a>
+                    <a href="#club" class="item-desktop">
+                        <img src="./assets/img/fan-club.svg" alt="">
+                        Club
+                    </a>
+                    <a href="#eventos" class="item-desktop">
+                        <img src="./assets/img/calendar.svg" alt="">
+                        Eventos
+                    </a>
+                    <a href="#contacto" class="item-desktop">
+                        <img src="./assets/img/contacto.svg" alt="">
+                        Contacto
+                    </a>
+                    <a href="#ofertas" class="item-desktop">
+                        <img src="./assets/img/etiqueta.svg" alt="">
+                        Ofertas
+                    </a>
+                    <span>
+                        <img src="./assets/img/traduccion.svg" alt="">
+                        <ul>
+                            <li>Español</li>
+                            <li>Valenciano</li>
+                            <li>Ingles</li>
+                        </ul>
+                    </span>
+                </div>
+            </nav>
     </header>
+      
+    <!------------------------ | MENU PARA MOBILE | --------------------->
+    <nav id="nav">
+        <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div id="wrap-items" class="menu-close">
+            <span class="wrap-item">
+                <a href="#inicio">Inicio</a>
+            </span>
+            <span class="wrap-item">
+                <a href="#">Club</a>
+            </span>
+            <span class="wrap-item">
+                <a href="#noticiasEventos">Noticias y eventos</a>
+            </span>
+            <span class="wrap-item">
+                <a href="#contacto">Contacto</a>
+            </span>
+            <span class="wrap-item">
+                <a href="#ofertas">Ofertas</a>
+            </span>
+        </div>
+    </nav>
+    <!--------------- FIN MENU PARA MOBILE -------------------->
+    <main id="main">
+        <div id="wrap-img-principal">
+            <div id="wrap-message">
+                <h1>BIENVENIDO/A AL CLUB DEPORTIVO 
+                    DUNES KITE PILES</h1>
+                <p>Un club pensado para navegar y disfrutar</p>
+            </div>
+            <img src="./assets/img/portadaPrincipalAlta.jpg" alt="">
+            <div class="wave" style="height: 40px; overflow: ;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-7.05,77.45 C116.53,-60.69 354.12,175.16 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+        </div>
+        <section id="info-meteo-section">
+            <h1>WEB CAMS</h1>
+            <div id="wrap-webcams">
+                <div class="webcams">
+                    <img src="https://turiscam.comunitatvalenciana.com/piles.jpg?0.28145689781577454" alt="" srcset="">
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script src="./assets/js/hamburguer.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
