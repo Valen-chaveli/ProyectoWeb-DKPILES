@@ -55,21 +55,23 @@
     </header>
       
     <!------------------------ | MENU PARA MOBILE | --------------------->
-    <nav id="nav">
+    <nav id="nav-mobile">
+        <!-- MENU HAMBURGUESA-->
         <button class="hamburger hamburger--collapse" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
         </button>
+        <!--NAVEGADOR LINKS-->
         <div id="wrap-items" class="menu-close">
             <span class="wrap-item">
                 <a href="#inicio">Inicio</a>
             </span>
             <span class="wrap-item">
-                <a href="#">Club</a>
+                <a href="#club">Club</a>
             </span>
             <span class="wrap-item">
-                <a href="#noticiasEventos">Noticias y eventos</a>
+                <a href="#eventos">Noticias y eventos</a>
             </span>
             <span class="wrap-item">
                 <a href="#contacto">Contacto</a>
@@ -81,22 +83,45 @@
     </nav>
     <!--------------- FIN MENU PARA MOBILE -------------------->
     <main id="main">
+        <!-- PORTADA IMAGEN-->
         <div id="wrap-img-principal">
             <div id="wrap-message">
                 <h1>BIENVENIDO/A AL CLUB DEPORTIVO 
-                    DUNES KITE PILES</h1>
+                   <span> DUNES KITE PILES </span></h1>
                 <p>Un club pensado para navegar y disfrutar</p>
             </div>
             <img src="./assets/img/portadaPrincipalAlta.jpg" alt="">
-            <div class="wave" style="height: 40px; overflow: ;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-7.05,77.45 C116.53,-60.69 354.12,175.16 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+            <div class="wave" style="height: 3rem; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-7.05,77.45 C116.53,-60.69 354.12,175.16 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
         </div>
-        <section id="info-meteo-section">
-            <h1>WEB CAMS</h1>
-            <div id="wrap-webcams">
-                <div class="webcams">
-                    <img src="https://turiscam.comunitatvalenciana.com/piles.jpg?0.28145689781577454" alt="" srcset="">
-                </div>
-                
+        <!--INFORMACION METEOROLOGICA-->
+        <section id="info-meteo-section" class="info">
+            <h1>Información meteorológica</h1>
+            <div id="wrap-meteo">
+                <script id="wg_fwdg_504236_100_1612016459235">
+                    (function (window, document) {
+                      var loader = function () {
+                        var arg = ["s=504236" ,"m=100","uid=wg_fwdg_504236_100_1612016459235" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=es" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,TMP,TMPE,WCHILL,FLHGT,CDC,TCDC,APCP1s,RH"];
+                        var script = document.createElement("script");
+                        var tag = document.getElementsByTagName("script")[0];
+                        script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+                        tag.parentNode.insertBefore(script, tag);
+                       
+                      };
+                      window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+                    })(window, document);
+                </script>
+            </div>
+        </section>
+        <section id="info-webcam-section"  class="info">
+            <h1>PILES AHORA</h1>
+            <div id="wrap-webcam-piles" class="webcam">
+                <img src="http://turiscam.comunitatvalenciana.com/piles.jpg?0.5925817608864854" alt="">
+            </div>
+            <div id="wrap-webcam" class="webcam">
+                <img src="http://turiscam.comunitatvalenciana.com/piles.jpg?0.5925817608864854" alt="">
+            </div>
+            <div id="wrap-webcam" class="webcam">
+                <img src="http://turiscam.comunitatvalenciana.com/piles.jpg?0.5925817608864854" alt="">
             </div>
         </section>
     </main>

@@ -15,6 +15,7 @@
     font-family: "Helvetica", "Arial", Verdana, Tahoma, sans-serif;
     font-size: 14px;
     height: 100vh;
+    scroll-behavior: smooth;
 
     /*Variables*/
     --first-color: #66A5AD;
@@ -23,9 +24,9 @@
     --third-color : #003B46;
     --third-alpha-color:rgba(0, 59, 70, 0.75);
     --contrast-color:#E6853C;
+    --contrast-alpha-color: #E6853C;
     --second-contrast-color:#994809;
     --white-color: #fff;
-
     --text-color: #222;
     --title-color: #07575B;
     --link-color: var(--contrast-color);
@@ -41,7 +42,6 @@ a, a:active, a:link {
 }
 
 #header {
-    border: 1px solid red;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -51,55 +51,21 @@ a, a:active, a:link {
 #wrap-logo {
     grid-area: lg;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     width: 100%;
 }
 
 #wrap-logo img {
-    width: 80px;
+    width: 20%;
 }
 
 #nav-desktop {
-    width: 100%;
-    grid-area: nv;
     display: none;
-    
-}
 
-#nav-desktop #wrap-items-desktop {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-}
-
-#nav-desktop #wrap-items-desktop .item-desktop {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 15%;
-}
-
-#nav-desktop #wrap-items-desktop span:last-of-type:hover {
-    background-color: red;
-    position: relative;
-}
-
-#nav-desktop #wrap-items-desktop span:last-of-type ul{
-    position: absolute;
-    z-index: 600;
-    margin-top: 0.1rem;
-    background-color: red;
-    display: none;
-}
-
-#nav-desktop img{
-    width: 50px;
 }
 
 .menu-open {
-    
     display: block;
 }
 
@@ -121,6 +87,7 @@ a, a:active, a:link {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+
 }
 
 #wrap-items span.wrap-item a {
@@ -128,6 +95,9 @@ a, a:active, a:link {
     padding: 1.5em;
     text-align: center;
     letter-spacing: 1px;
+    color: white;
+    text-shadow: 1px 0px 5px black;
+    border-bottom: 1px solid black;
 }
 
 #wrap-items span.wrap-item a:hover {
@@ -139,8 +109,6 @@ a, a:active, a:link {
 }
 
 
-#wrap-logo img {}
-
 .hamburger {
     width: 100%;
     position: fixed;
@@ -149,12 +117,20 @@ a, a:active, a:link {
     justify-content: center;
     align-items: center;
     background-color: var(--first-color);
-   
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.3rem;
 }
 
 #wrap-img-principal {
     width: 100%;
     position: relative;
+}
+#wrap-img-principal img{
+    width: 100%;
 }
 
 #wrap-message {
@@ -167,9 +143,14 @@ a, a:active, a:link {
     align-items: center;
     text-align: center;
     font-family: "Finland-Bold";
-    font-size: 24px;
+    font-size: 1.6rem;
     color: var(--white-color);
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 5px black;
+}
+
+#wrap-message span {
+   color: var(--contrast-alpha-color);
+   text-shadow: 1px 0px 1px black;
 }
 
 #wrap-img-principal img{
@@ -182,15 +163,40 @@ a, a:active, a:link {
     width: 100%;
 }
 
-#info-meteo-section {
-    border: 1px solid black;
+.info {
+    padding: 1rem;
     text-align: center;
     color: var(--title-color);
-}
-
-#wrap-webcams {
+    font-family:var(--title-font);
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+}
+
+.info h1 {
+    font-size: 3rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+#wrap-webcam-piles {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+#wrap-webcam-piles img {
+    width: 100%;
+}
+
+.webcam {
+    width: 100%;
+}
+
+.webcam img{
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -198,29 +204,69 @@ a, a:active, a:link {
         font-size: 16px;
     }
     
+    #nav-mobile{
+        display: none;
+    }
+
     #nav-desktop {
         display: block;
         font-size: 1.5rem;
+        width: 100%;
+        grid-area: nv;
     }
 
     #nav-desktop #wrap-items-desktop .item-desktop {
-        font-size: 50px;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    #nav-desktop #wrap-items-desktop .item-desktop:hover {
+        background-color: gray
+    }
+
+    #nav-desktop #wrap-items-desktop {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
     }
     
+    #nav-desktop #wrap-items-desktop .item-desktop {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15%;
+    }
+    
+    #nav-desktop #wrap-items-desktop span:last-of-type:hover {
+        position: relative;
+    }
+    
+    #nav-desktop #wrap-items-desktop span:last-of-type ul{
+        position: absolute;
+        z-index: 600;
+        margin-top: 0.1rem;
+        display: none;
+    }
+    
+    #nav-desktop img{
+        width: 2.5rem;
+    }
+    
+    
     #wrap-message {
-        font-size: 4.5rem;
+        font-size: 5vw;
     }
 
     #wrap-logo img {
-        width: 200px;
+        width: 10rem;
     }
 
     #header {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "lg nv nv nv nv nv";
-    }
-    #nav {
-        display: none;
+        grid-gap: 1rem;
     }
 
 }
