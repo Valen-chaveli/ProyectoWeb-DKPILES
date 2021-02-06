@@ -155,6 +155,7 @@ a, a:active, a:link {
 
 #wrap-img-principal img{
     width: 100%;
+    object-fit: cover;
 }
 
 .wave {
@@ -219,10 +220,11 @@ a, a:active, a:link {
         font-size: 1.5rem;
         padding: 1rem;
         border-radius: 1rem;
+        transition: background-color .8s ease;
     }
 
     #nav-desktop #wrap-items-desktop .item-desktop:hover {
-        background-color: gray
+        background-color: #EFEFEF;
     }
 
     #nav-desktop #wrap-items-desktop {
@@ -267,6 +269,11 @@ a, a:active, a:link {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "lg nv nv nv nv nv";
         grid-gap: 1rem;
+    }
+
+    #info-webcam-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
