@@ -33,6 +33,10 @@
     --title-font : "Finland-Bold";
 }
 
+body {
+    scroll-snap-type: y mandatory;
+}
+
 a, a:active, a:link {
     color: black;
 }
@@ -146,6 +150,7 @@ a, a:active, a:link {
     font-size: 1.6rem;
     color: var(--white-color);
     text-shadow: 1px 1px 5px black;
+    scroll-snap-align: start;
 }
 
 #wrap-message span {
@@ -172,6 +177,7 @@ a, a:active, a:link {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
+    scroll-snap-align: center;
 }
 
 .info h1 {
@@ -209,11 +215,27 @@ a, a:active, a:link {
         display: none;
     }
 
+    #header {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "lg nv nv nv nv nv";
+        grid-gap: 1rem;
+    }
+
     #nav-desktop {
         display: block;
         font-size: 1.5rem;
         width: 100%;
         grid-area: nv;
+        
+    }
+
+    #nav-desktop #wrap-items-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 1.5rem;
+   
     }
 
     #nav-desktop #wrap-items-desktop .item-desktop {
@@ -221,35 +243,35 @@ a, a:active, a:link {
         padding: 1rem;
         border-radius: 1rem;
         transition: background-color .8s ease;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15%;
     }
 
     #nav-desktop #wrap-items-desktop .item-desktop:hover {
         background-color: #EFEFEF;
     }
 
-    #nav-desktop #wrap-items-desktop {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
+    #nav-desktop #wrap-items-desktop span:last-of-type {
+        padding: 1rem;
+        font-size: 1.6rem;
     }
-    
-    #nav-desktop #wrap-items-desktop .item-desktop {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 15%;
-    }
-    
+
     #nav-desktop #wrap-items-desktop span:last-of-type:hover {
         position: relative;
+        background-color: #d6d6d6;
+        border-radius: 50%;
+        transition: all .5s;
     }
     
     #nav-desktop #wrap-items-desktop span:last-of-type ul{
         position: absolute;
         z-index: 600;
-        margin-top: 0.1rem;
+        margin-top: 4rem;
         display: none;
+        border: 1px solid red;
     }
     
     #nav-desktop img{
@@ -265,15 +287,11 @@ a, a:active, a:link {
         width: 10rem;
     }
 
-    #header {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: "lg nv nv nv nv nv";
-        grid-gap: 1rem;
-    }
 
     #info-webcam-section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
     }
 
 }
