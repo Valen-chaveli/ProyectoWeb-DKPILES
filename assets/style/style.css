@@ -175,6 +175,7 @@ a:active, a:link {
 .container-webcams {
   height: 100%;
   margin-bottom: 100%;
+  border: 2px solid red;
 }
 
 #wrap-webcam-gandia {
