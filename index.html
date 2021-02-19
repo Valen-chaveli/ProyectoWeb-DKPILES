@@ -44,7 +44,7 @@
                         <i class="fa fa-picture-o" aria-hidden="true"></i>
                         Galeria
                     </a>
-                    <a href="#eventos" class="item-desktop">
+                    <a href="#events-section" class="item-desktop">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                         Eventos
                     </a>
@@ -88,7 +88,7 @@
                 <a href="#gallery-section">Galeria</a>
             </span>
             <span class="wrap-item">
-                <a href="#eventos">Noticias y eventos</a>
+                <a href="#events-section">Noticias y eventos</a>
             </span>
             <span class="wrap-item">
                 <a href="#contacto">Contacto</a>
@@ -121,22 +121,83 @@
         <!-- INFORMACION DE WEBCAMS -->
         <section id="info-webcam-section" class="info">
             <div class="container-webcams">
-                    <h1>PILES AHORA</h1>
-                    <div id="wrap-webcam-piles" class="webcam">
-                        <img src="http://turiscam.comunitatvalenciana.com/piles.jpg?0.5925817608864854" alt="">
-                    </div>
-            </div>
-            <div class="container-webcams">
                 <h1>OLIVA AHORA</h1>
                 <div id="wrap-webcam-oliva" class="webcam">
-                    <img src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.5925817608864854" alt="">
+                        <div class="webcam-visor">
+                                 <img
+                                   style="position:absolute; z-index:127; display:none; "
+                                   id="olivapopimage0"
+                                   src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.8272606303741428"
+                                   alt=""
+                                 />
+                                 <img
+                                   style="position:absolute; z-index:131; display:none; "
+                                   id="olivapopimage1"
+                                   src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.8272606303741428"
+                                   alt=""
+                                 />
+                                 <img
+                                   style="position:absolute; z-index:132; display:none; "
+                                   id="olivapopimage2"
+                                   src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.8272606303741428"
+                                   alt=""
+                                 />
+                        </div>
                 </div>
+            </div>
+            <div class="container-webcams">
+                <h1>PILES AHORA</h1>
+                    <div id="wrap-webcam-piles" class="webcam">
+                        <div id="hora">
+                            01-02-2021 11:57:30
+                         </div>
+                            <div id="webcam-visor">
+                                     <img
+                                       style="position:absolute; z-index:127; display:none; "
+                                       id="popimage0"
+                                       src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448"
+                                       alt=""
+                                     />
+                                     <img
+                                       style="position:absolute; z-index:131; display:none; "
+                                       id="popimage1"
+                                       src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.1481255725516435"
+                                       alt=""
+                                     />
+                                     <img
+                                       style="position:absolute; z-index:132; display:none; "
+                                       id="popimage2"
+                                       src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056"
+                                       alt=""
+                                     />
+                            </div>
+                    </div>
+                
             </div>
             <div class="container-webcams">
                 <h1>GANDIA AHORA</h1>
                 <div id="wrap-webcam-gandia" class="webcam">
-                    <img src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.7229387756517518" alt="">
-                </div>
+                    <div class="webcam-visor">
+                        <img
+                          style="position:absolute; z-index:127; display:none; "
+                          id="gandiapopimage0"
+                          src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.40931952059270116"
+                          alt=""
+                        />
+                        <img
+                          style="position:absolute; z-index:131; display:none; "
+                          id="gandiapopimage1"
+                          src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.40931952059270116"
+                          alt=""
+                        />
+                        <img
+                          style="position:absolute; z-index:132; display:none; "
+                          id="gandiapopimage2"
+                          src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.40931952059270116"
+                          alt=""
+                        />
+               </div>
+            </div>
             </div>
         </section>
     </main>
@@ -236,22 +297,38 @@
             <!-- Paginacion -->
             <div class="swiper-pagination"></div>
         </div>
-        </div>
-
-        <!--END GALLERY MOBILE-->
+    </div> <!--Final GALLERY MOBILE-->
+    <!-- Galeria para el escritorio-->
     </div>
-
         <div id="gallery-desktop">
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0037.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0040.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0061.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0103.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0104.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0132.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0181.JPG" alt=""></div>
-            <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0225.JPG" alt=""></div>
+            <p>Se trata de todo el conjunto de fotos de grupo que hemos podido recopilar de los años previos a la web. Recogemos en un gran grupo de momentos divertidos e inolvidables desde que se los inicios del club hasta el final de la temporada 2012.</p>
+                <div id="wrap-column-photos">
+                    <div class="column">
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0037.JPG" alt=""></div>
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0132.JPG" alt=""></div>
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0061.JPG" alt=""></div>
+                    </div>
+                    <div class="column">
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0103.JPG" alt=""></div>
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0225.JPG" alt=""></div>
+
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0040.JPG" alt=""></div>
+                    </div>
+                    <div class="column">
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0181.JPG" alt=""></div>
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0104.JPG" alt=""></div>
+                        <div class="wrap-img-desktop"><img src="./assets/img/fotos/IMG_20200802_201649.jpg" alt=""></div>
+                    </div>
+                </div>
         </div>
     </section>
+
+    <section id="events-section">
+        <h1>Noticias y Enventos</h1>
+    </section>
+    <script src="./assets/js/webcamGandia.js"></script>
+    <script src="./assets/js/webcamOliva.js"></script>
+    <script type="text/javascript" src="./assets/js/webcam.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -266,13 +343,9 @@
             },
         });
       </script>
-
-
     <script src="./assets/js/hamburguer.js"></script>
- 
     <script>
         new WOW().init();
     </script>
-
 </body>
 </html>

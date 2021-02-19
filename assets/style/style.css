@@ -150,6 +150,7 @@ a:active, a:link {
 
 .info {
   padding: 1rem;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
@@ -166,9 +167,42 @@ a:active, a:link {
   border-bottom: 2px solid #07575B;
 }
 
+#info-webcam-section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container-webcams {
+  height: 100%;
+  margin-bottom: 100%;
+}
+
+#wrap-webcam-gandia {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#wrap-webcam-oliva {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
 #wrap-webcam-piles {
   width: 100%;
+  position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+#wrap-webcam-piles #hora {
+  padding: 1rem;
+  text-align: center;
+  color: #07575B;
+  font-family: "Finland-Bold";
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #07575B;
 }
 #wrap-webcam-piles img {
   width: 100%;
@@ -221,7 +255,6 @@ a:active, a:link {
 /** ----- GALERY-SECTION -------- */
 #gallery-section {
   padding: 1rem;
-  height: 600px;
 }
 #gallery-section #gallery-desktop {
   display: none;
@@ -258,6 +291,11 @@ a:active, a:link {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/** ----- GALERY-SECTION -------- */
+#events-section {
+  border: 1px solid black;
 }
 
 @media (min-width: 768px) {
@@ -330,6 +368,10 @@ a:active, a:link {
   }
 
   #info-webcam-section {
+    position: relative;
+    border: 1px solid black;
+    overflow-y: auto;
+    height: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -354,16 +396,32 @@ a:active, a:link {
     display: none;
   }
   #gallery-section #gallery-desktop {
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row wrap;
+    display: block;
   }
-  #gallery-section #gallery-desktop .wrap-img-desktop {
-    width: 25%;
+  #gallery-section #gallery-desktop p {
+    font-family: "Helvetica";
+    line-height: 1.5;
+    color: #222;
+    text-align: justify;
+    margin-bottom: 1rem;
   }
-  #gallery-section #gallery-desktop .wrap-img-desktop img {
+  #gallery-section #gallery-desktop #wrap-column-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  #gallery-section #gallery-desktop #wrap-column-photos .wrap-img-desktop {
     width: 100%;
-    object-fit: cover;
+  }
+  #gallery-section #gallery-desktop #wrap-column-photos .wrap-img-desktop img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+  }
+  #gallery-section #gallery-desktop #wrap-column-photos .wrap-img-desktop img:hover {
+    transition: 2s;
+    transform: scale(1.05);
+    border-radius: 7px;
   }
 
   #wrap-logo {

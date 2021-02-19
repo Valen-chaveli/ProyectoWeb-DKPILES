@@ -25,7 +25,6 @@ $text-font: "Helvetica";
     font-size: 3rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid $title-color;
-    
 }
 
 @mixin text-style {
@@ -33,6 +32,14 @@ $text-font: "Helvetica";
     line-height: 1.5;
     color: $text-color;
     text-align: justify;
+}
+
+@mixin webcams {
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 /*RESET*/
@@ -192,7 +199,7 @@ a {
 
 .info {
   padding: 1rem;
-  
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
@@ -201,11 +208,31 @@ a {
   h1 {@include titles-sections(); }
 }
 
+#info-webcam-section{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container-webcams {
+  height: 100%;
+  margin-bottom:100%;
+}
+
+#wrap-webcam-gandia {
+  @include webcams();
+}
+
+#wrap-webcam-oliva {
+  @include webcams();
+}
+
 #wrap-webcam-piles {
-  width: 100%;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+ 
+  @include webcams();
+
+  #hora {
+    @include titles-sections();
+  }
 
   img {
     width: 100%;
@@ -214,7 +241,6 @@ a {
 
 .webcam {
   width: 100%;
-
   img {
     width: 100%;
   }
@@ -254,7 +280,6 @@ a {
 #gallery-section {
 
     padding: 1rem;
-    height: 600px;
 
     #gallery-desktop {
       display: none;
@@ -282,14 +307,18 @@ a {
             object-fit: cover;
           }
         }
-        
       }
   
     }
 }
 
 //--------------------------------
+/** ----- GALERY-SECTION -------- */
+#events-section {
+  border: 1px solid black;
+}
 
+//--------------------------------
 
 @media (min-width: 768px) {
   :root {
@@ -369,6 +398,10 @@ a {
   }
 
   #info-webcam-section {
+    position: relative;
+    border: 1px solid black;
+    overflow-y: auto;
+    height: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -399,17 +432,33 @@ a {
     }
 
     #gallery-desktop {
-      display: flex;
-      justify-content: flex-start;
-      flex-flow: row wrap;
-      .wrap-img-desktop {
-        width: 25%;
-       
-        img {
+      display: block;
+      p{
+        @include text-style();
+        margin-bottom: 1rem;
+      }
+      
+      #wrap-column-photos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1rem;
+
+        .wrap-img-desktop {
           width: 100%;
-          object-fit: cover;
+          img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px black;
+            &:hover {
+              transition: 2s;
+              transform: scale(1.05);
+              border-radius: 7px;
+            }
+          }
         }
       }
+
+
     }
  
   }
