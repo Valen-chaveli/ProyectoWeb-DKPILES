@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 $first-color:#66A5AD;
 $first-alpha-color:rgba(102, 165, 173, 0.75);
 $second-alpha-color:rgba(7, 87, 91, 0.75);
@@ -15,6 +16,10 @@ $link-color:var(--contrast-color);
 $title-font:"Finland-Bold";
 $text-font: "Helvetica";
 
+$facebook-icon-color: #1877F2;
+$whatsapp-icon-color: #00E676;
+
+$hamburguer-menu-height: 50px;
 
 @mixin titles-sections {
     padding: 1rem;
@@ -141,6 +146,7 @@ a {
 
 .hamburger {
   width: 100%;
+  height: $hamburguer-menu-height;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -148,6 +154,7 @@ a {
   align-items: center;
   background-color: $first-color;
   z-index: 999;
+
 }
 
 #main {
@@ -214,9 +221,7 @@ a {
 }
 
 .container-webcams {
-  height: 100%;
   margin-bottom: 100%;
-  border: 2px solid red;
 }
 
 #wrap-webcam-gandia {
@@ -273,11 +278,49 @@ a {
             margin-left: 2rem;
         }
     }
+
+    h2 {
+      @include text-style();
+      padding: 1rem;
+      color: $contrast-color;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+     #wrap-como-llegar {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+
+      #wrap-container-como-llegar {
+        width: 100%;
+        iframe {
+          width: 100%;
+        }
+      }
+     } //Fin como-llegar
+
+     #wrap-requisitos {
+      grid-area: rqs;
+      
+     h2 {text-align: center;}
+     ul {
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+       
+       li {
+         list-style:circle; 
+         margin: 2rem;
+         font-size: 1.3rem;
+       }
+     }
+    }
 }
 //--------------------------------
 
 /** ----- GALERY-SECTION -------- */
-
 #gallery-section {
 
     padding: 1rem;
@@ -312,14 +355,129 @@ a {
   
     }
 }
-
 //--------------------------------
-/** ----- GALERY-SECTION -------- */
+
+/** ----- EVENTS-SECTION -------- */
 #events-section {
-  border: 1px solid black;
+  padding: 1rem;
+
+  h1 {@include titles-sections(); }
+  h2 {
+    @include text-style();
+    color: $contrast-alpha-color;
+  }
+
+
+  #wrap-event-calendar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  #wrap-news {
+
+    display: grid;
+    grid-gap: 1rem;
+    
+    img {width: 100% }
+
+    .blog-new {
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "imb ctb ctb ctb";
+      grid-gap: 0.5rem;
+      
+      width: 100%;
+
+      .wrap-img-blog {
+        grid-area: imb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {width: 100%;}
+      }
+
+      .wrap-content-blog {
+        grid-area: ctb;
+      }
+
+    }
+  }
 }
 
 //--------------------------------
+
+
+/** ----- PIE DE PAGINA -------- */
+
+footer#footer {
+  @include text-style();
+  margin-bottom: $hamburguer-menu-height;
+  background-color: $third-color;
+  color: white;
+  padding: 2rem;
+
+  #wrap-content-footer {
+ 
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5 ,1fr);
+    grid-template-areas: "prv prv prv prv prv"
+                          "icn icn icn rrs rrs";
+
+    #privacidad {
+      grid-area: prv;
+      a {color: $white-color;}
+
+      #wrap-idiomas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    
+    }
+
+    #footerIcono {
+      grid-area: icn;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #wrap-rrss {
+      grid-area: rrs;
+      font-size: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      .fa-facebook {
+        color: $facebook-icon-color;
+      }
+
+      .fa-whatsapp {
+        color: $whatsapp-icon-color;
+      }
+    }
+    img {
+      width: 70%;
+    }
+  }
+}
+
+
+/*********************************/
 
 @media (min-width: 768px) {
   :root {
@@ -363,32 +521,11 @@ a {
           background-color: #EFEFEF;
         }
       }
-
-      span:last-of-type {
-        padding: 1rem;
-        font-size: 1.6rem;
-
-        &:hover {
-          position: relative;
-          background-color: #d6d6d6;
-          border-radius: 50%;
-          transition: all .5s;
-        }
-
-        ul {
-          position: absolute;
-          z-index: 600;
-          margin-top: 4rem;
-          display: none;
-
-        }
-      }
     }
-
     img {
       width: 2.5rem;
     }
-  }
+  }// FIN de la navegacion para escritorio
 
   #wrap-message {
     font-size: 5vw;
@@ -400,7 +537,6 @@ a {
 
   #info-webcam-section {
     position: relative;
-    border: 1px solid black;
     overflow-y: auto;
     height: 600px;
     display: grid;
@@ -409,23 +545,20 @@ a {
 
   #club-section {
       display: grid;
-      grid-template-columns: repeat(2, 4fr);
-        grid-template-areas: 
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
         "tlt tlt tlt tlt"
-        "img ctn ctn ctn";
-        grid-gap: 1rem;
+        "img img ctn ctn"
+        "ubc ubc rqs rqs";
+      grid-gap: 1rem;
 
-      h1 {
-          grid-area: tlt;
-      }
+      h1 { grid-area: tlt; }
+      #wrap-img { grid-area: img;}
+      #wrap-content { grid-area: ctn;}
+      #wrap-como-llegar {grid-area: ubc;}
+      #wrap-requisitos { grid-area: rqs;}
 
-      #wrap-img {
-          grid-area: img;
-      }
-      #wrap-content {
-          background-color: ctn;
-      }
-  }
+  }// Fin de la seccion del club
 
   #gallery-section{
     #gallery-mobile {
@@ -458,10 +591,27 @@ a {
           }
         }
       }
-
-
     }
- 
-  }
+  } //Fin de la seccion de la galeria y fotos
 
+  //FOOTER
+  footer#footer {
+    margin-bottom: 0;
+
+    #wrap-content-footer {
+      grid-template-columns: repeat(6 ,1fr);
+      grid-template-areas: "prv prv icn icn rrs rrs";
+
+      #privacidad {
+        margin-top: 4rem
+      }
+
+      #wrap-rrss a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+      }
+    }
+  }
 }

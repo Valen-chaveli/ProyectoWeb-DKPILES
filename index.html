@@ -26,6 +26,7 @@
     
 </head>
 <body id="inicio">
+    <!----------------- CABECERA/ MENU PARA ESCRITORIO -------------->
     <header id="header">
         <div id="wrap-logo">
             <img src="./assets/img/iconoWeb.png" alt="DK PILES">
@@ -56,19 +57,12 @@
                         <i class="fa fa-address-card" aria-hidden="true"></i>
                         Ofertas
                     </a>
-                    <span>
-                        <i class="fa fa-language" aria-hidden="true"></i>
-                        <ul>
-                            <li>Español</li>
-                            <li>Valenciano</li>
-                            <li>Ingles</li>
-                        </ul>
-                    </span>
                 </div>
             </nav>
     </header>
+    <!----------------- | FIN PARA ESCRITORIO | -------------->
       
-    <!------------------------ | MENU PARA MOBILE | --------------------->
+    <!----------------- | MENU PARA MOBILE | ------------------>
     <nav id="nav-mobile">
         <!-- MENU HAMBURGUESA-->
         <button class="hamburger hamburger--collapse" type="button">
@@ -99,6 +93,8 @@
         </div>
     </nav>
     <!--------------- FIN MENU PARA MOBILE -------------------->
+
+    <!---------------- | SECCION PRINCIPAL | ------------------->
     <main id="main">
         <!-- PORTADA IMAGEN-->
         <div id="wrap-img-principal">
@@ -110,15 +106,17 @@
             <img src="./assets/img/portadaPrincipalAlta.jpg" alt="">
             <div class="wave" style="height: 3rem; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-7.05,77.45 C116.53,-60.69 354.12,175.16 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
         </div>
-        <!--INFORMACION METEOROLOGICA-->
+        <!------- SECCION INFORMACION METEOROLOGICA --------->
         <section id="info-meteo-section" class="info">
             <h1>Información meteorológica</h1>
             <div id="wrap-meteo">
                 <script id="wg_fwdg_504236_100_1612016459235" src="./assets/js/infoMeteo.js">
                 </script>
             </div>
-        </section>
-        <!-- INFORMACION DE WEBCAMS -->
+        </section> <!-- FIN SECCION INFORMACION METEOROLOGICA ----------->
+       
+
+        <!---------- SECCION INFORMACION DE WEBCAMS --------------->
         <section id="info-webcam-section" class="info">
             <div class="container-webcams">
                 <h1>OLIVA AHORA</h1>
@@ -199,8 +197,11 @@
                </div>
             </div>
             </div>
-        </section>
-    </main>
+        </section> <!-- FIN SECCION INFORMACION WEBCAMS-->
+    </main> <!------------ FIN SECCION PRINCIPAL -------------->
+    
+
+    <!------------ SECCION DEL CLUB -------------------->
     <section id="club-section">
         <h1>El club</h1>
         <div id="wrap-img">
@@ -255,10 +256,28 @@
             </p>
            
         </div>
+        <div id="wrap-como-llegar">
+            <h2>¿Como llegar?</h2>
+            <div id="wrap-container-como-llegar">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6205.668974969022!2d-0.1204852!3d38.9506094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e77b92a80ab1%3A0x28c90396840f0a8e!2sDKPiles!5e0!3m2!1ses!2ses!4v1613772072668!5m2!1ses!2ses"height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div id="wrap-requisitos">
+            <h2>Requisitos para navegar</h2>
+            <ul>
+                <li>Seguro en vigor</li>
+                <li>Mayor de edad o Autorización tutor.</li>
+                <li>Nivel básico (entrada y salida por el canal).</li>
+                <li>Acatar normas y condiciones del club.</li>
+            </ul>
+        </div>
     </section>
+    <!-- FIN DE LA SECCION DEL CLUB -->
+
+    <!-- SECCION DE LA GALERIA Y FOTOS -->
     <section id="gallery-section">
-        <h1>Galeria</h1>
-        <div id="gallery-mobile">
+        <h1 class="wow bounceInDown" data-wow-duration="1s">Galeria</h1>
+        <div id="gallery-mobile" class="wow bounceInDown" data-wow-duration="1s">
             <p>Se trata de todo el conjunto de fotos de grupo que hemos podido recopilar de los años previos a la web. Recogemos en un gran grupo de momentos divertidos e inolvidables desde que se los inicios del club hasta el final de la temporada 2012.</p>
         <div id="wrap-galley-mobile">
             <div class="swiper-container">
@@ -300,9 +319,9 @@
     </div> <!--Final GALLERY MOBILE-->
     <!-- Galeria para el escritorio-->
     </div>
-        <div id="gallery-desktop">
+        <div id="gallery-desktop"   >
             <p>Se trata de todo el conjunto de fotos de grupo que hemos podido recopilar de los años previos a la web. Recogemos en un gran grupo de momentos divertidos e inolvidables desde que se los inicios del club hasta el final de la temporada 2012.</p>
-                <div id="wrap-column-photos">
+                <div id="wrap-column-photos" >
                     <div class="column">
                         <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0037.JPG" alt=""></div>
                         <div class="wrap-img-desktop"><img src="./assets/img/fotos/DSC_0132.JPG" alt=""></div>
@@ -322,10 +341,90 @@
                 </div>
         </div>
     </section>
+    <!-- FIN DE LA SECCION DE LA GALERIA Y FOTOS-->
 
+    <!-- SECCION DE NOTICIAS Y EVENTOS-->
     <section id="events-section">
+
         <h1>Noticias y Enventos</h1>
+
+        <div id="wrap-event-calendar">
+            <h2>Próximos eventos</h2>
+            <iframe src="https://calendar.google.com/calendar/embed?src=tnngfmjjceurt9c4itq4ljddq8%40group.calendar.google.com&ctz=Europe%2FMadrid" style="border: 0" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div id="wrap-news">
+            <h2>Noticias kitesurf</h2>
+            <div class="blog-new"> <!-- Noticia/blog 1-->
+                <div class="wrap-img-blog">
+                    <img src="./assets/img/blog-fotos/beauduc-kitesurfing.jpg" alt="">
+                </div>
+                <div class="wrap-content-blog">
+                    <h4>Aprende el Raley en KiteSurf</h4>
+                    <p> 
+                       Para iniciarnos al estilo New School de Kitesurf aprenderemos primero el Raley. 
+                    </p>
+                </div>
+            </div> <!-- Fin noticia/blog1-->
+
+            <div class="blog-new"> <!--Noticia/blog 2-->
+                <div class="wrap-img-blog">
+                    <img src="./assets/img/blog-fotos/alquiler-kitesurf-spinosa.jpg" alt="">
+                </div>
+                <div class="wrap-content-blog">
+                    <h4>Normas básicas de navegación en kitesurf</h4>
+                    <p> 
+                        Intentaremos en éste artículo mejorar o aprender a ceñir en kitesurf, una maniobra básica que a veces cuesta de interpretar.
+                    </p>
+                </div>
+            </div> <!-- Fin noticia/blog2-->
+
+            <div class="blog-new"> <!--Noticia/blog 3-->
+                <div class="wrap-img-blog">
+                    <img src="./assets/img/blog-fotos/cometa.png" alt="">
+                </div>
+                <div class="wrap-content-blog">
+                    <h4>Empezar a surfear con mi comenta de kitesurf</h4>
+                    <p> 
+                        Vamos a aprender los primeros pasos para surfear con nuestra cometa de kitesurf
+                    </p>
+                </div>
+            </div> <!-- Fin noticia/blog3-->
+
+        </div>
     </section>
+
+    <!------- PIE DE PAGINA --------->
+    <footer id="footer">
+        <div id="wrap-content-footer">
+            <div id="privacidad">
+                <div><i>"Un club pensado para navegar y disfrutar"</i></div> 
+                <div><a href="">Politica de privacidad</a></div>
+                <div><a href="">Politica de Cookies</a></div>
+                <div id="wrap-idiomas">
+                    <div id="es">
+                        <img src="./assets/img/espana.svg" alt="">
+                    </div>
+                    <div id="valencia">
+                        <img src="./assets/img/idioma-en-ingles.svg" alt="">
+                    </div>
+                    <div id="ingles">
+                        <img src="./assets/img/512px-Flag_of_the_Valencian_Community_(2x3).svg.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="footerIcono">
+                <img src="./assets/img/iconoWeb.png" alt="">
+            </div>
+            <div id="wrap-rrss">
+                <a href="https://www.facebook.com/DunesKitePiles-285379918186780/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" ><i class="fa fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN DEL PIE DE PAGINA-->
+
+    <!-- SCRIPTS -->
     <script src="./assets/js/webcamGandia.js"></script>
     <script src="./assets/js/webcamOliva.js"></script>
     <script type="text/javascript" src="./assets/js/webcam.js"></script>
@@ -347,5 +446,6 @@
     <script>
         new WOW().init();
     </script>
+    <!-- FIN DE LOS SCRIPTS-->
 </body>
 </html>
