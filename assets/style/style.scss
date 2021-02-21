@@ -47,6 +47,18 @@ $hamburguer-menu-height: 50px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
+@mixin buttonsBlog {
+  @include text-style();
+  padding: 0.3rem;
+  background-color: $contrast-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($color: $contrast-color, $amount: 10%);
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.75);
+  }
+}
+
 /*RESET*/
 * {
   margin: 0px;
@@ -64,8 +76,32 @@ $hamburguer-menu-height: 50px;
   scroll-behavior: smooth;
 }
 
-body {
-  scroll-snap-type: y mandatory;
+body {scroll-snap-type: y mandatory;}
+
+#cookiesBanner {
+  @include text-style();
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $contrast-alpha-color;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  opacity: 1;
+  z-index: 60000;
+
+  p {margin-bottom: 1rem; }
+
+  input { 
+    padding: 0.5rem;
+    background-color: $first-color;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+
+    &:hover{
+      background-color: $first-alpha-color;
+    }
+   }
 }
 
 a {
@@ -75,9 +111,12 @@ a {
   }
 }
 
-.menu-close {
-  display: none !important;
-}
+//Colores de las redes sociales
+.fa-facebook { color: $facebook-icon-color; }
+
+.fa-whatsapp { color: $whatsapp-icon-color; }
+
+.menu-close {display: none !important; }
 
 #header {
   width: 100%;
@@ -92,19 +131,12 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-
-  img {
-    width: 20%;
-  }
+  img {width: 20%;}
 }
 
-#nav-desktop {
-  display: none;
-}
+#nav-desktop {display: none;}
 
-.menu-open {
-  display: block;
-}
+.menu-open {display: block;}
 
 #wrap-items {
   transition: all 1.5s ease;
@@ -133,13 +165,9 @@ a {
       text-shadow: 1px 0px 5px black;
       border-bottom: 1px solid black;
 
-      &:hover {
-        background-color: $second-alpha-color
-      }
+      &:hover {background-color: $second-alpha-color;}
 
-      &:active {
-        background-color: $third-alpha-color;
-      }
+      &:active {background-color: $third-alpha-color;}
     }
   }
 }
@@ -167,9 +195,7 @@ a {
   width: 100%;
   position: relative;
 
-  img {
-    width: 100%;
-  }
+  img {width: 100%;}
 }
 
 #wrap-message {
@@ -185,7 +211,7 @@ a {
   font-size: 1.6rem;
   color: $white-color;
   text-shadow: 1px 1px 5px black;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 
   span {
     color: $contrast-alpha-color;
@@ -198,12 +224,13 @@ a {
   object-fit: cover;
 }
 
+
 .wave {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-
+#wgs_widget_51_1403353076147 {margin: 0 auto;}
 .info {
   padding: 1rem;
   position: relative;
@@ -220,50 +247,34 @@ a {
   grid-template-columns: 1fr;
 }
 
-.container-webcams {
-  margin-bottom: 100%;
-}
+.container-webcams {scroll-snap-align: center; margin-bottom: 100%;}
 
-#wrap-webcam-gandia {
-  @include webcams();
-}
+#wrap-webcam-gandia {@include webcams();}
 
-#wrap-webcam-oliva {
-  @include webcams();
-}
+#wrap-webcam-oliva {@include webcams();}
 
 #wrap-webcam-piles {
- 
   @include webcams();
-
-  #hora {
-    @include titles-sections();
-  }
-
-  img {
-    width: 100%;
-  }
+  #hora {@include titles-sections();}
+  img {width: 100%;}
 }
 
 .webcam {
   width: 100%;
-  img {
-    width: 100%;
-  }
+  img {width: 100%;}
 }
 
 
 /** ----- CLUB-SECTION -------- */
 #club-section {
+    scroll-snap-align: center;
     padding: 1rem;
         
     h1 { @include titles-sections();}
 
     div {
         width: 100%;
-        img {
-            width: 100%;
-        }
+        img {width: 100%;}
     }
     #wrap-content{
         @include text-style();
@@ -322,7 +333,7 @@ a {
 
 /** ----- GALERY-SECTION -------- */
 #gallery-section {
-
+    scroll-snap-align: center;
     padding: 1rem;
 
     #gallery-desktop {
@@ -359,24 +370,23 @@ a {
 
 /** ----- EVENTS-SECTION -------- */
 #events-section {
+  scroll-snap-align: center;
   padding: 1rem;
 
   h1 {@include titles-sections(); }
   h2 {
     @include text-style();
     color: $contrast-alpha-color;
+    margin-bottom: 1rem;
   }
 
 
   #wrap-event-calendar {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    margin-bottom: 1rem;
+
     iframe {
       width: 100%;
-      height: 300px;
+      height: 100%;
     }
   }
 
@@ -406,6 +416,11 @@ a {
 
       .wrap-content-blog {
         grid-area: ctb;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        button {@include buttonsBlog() }
       }
 
     }
@@ -414,9 +429,103 @@ a {
 
 //--------------------------------
 
+/** ------- CONTACT SECTION ------------ */
+
+#contact-section {
+  @include text-style();
+  scroll-snap-align: center;
+  padding: 1rem;
+
+  h1 {@include titles-sections() }
+
+  #wrap-img-contact { display: none;}
+  form {
+
+    display: grid;
+    grid-gap: 1rem;
+    input {
+      @include text-style();
+      padding: 0.3rem;
+      width: 100%;
+    }
+    textarea {resize: none; }
+
+    #wrap-submit {
+     display: flex;
+     justify-content: center;
+     input[type="submit"] {
+      text-align: center;
+      width: 50%;
+      background-color: $contrast-color;
+    }
+    }
+
+
+  }
+}
+
+//--------------------------------------
+
+//** ------- OFFERS SECTION ------------ */
+section#offers-section {
+  scroll-snap-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  
+  h1 {@include titles-sections();}
+  #wrap-desktop-img-offer{ display: none;}
+
+  #wrap-offers {
+    display: grid;
+    grid-gap: 1rem;
+
+
+    .offer {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: "imgo imgo cnto cnto cnto";
+      grid-gap: 1rem;
+
+      .img-offer {
+        grid-area: imgo;
+        img {width: 100%;  }
+      }
+      .wrap-content-offer {
+        grid-area: cnto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h4 {
+          @include text-style();
+          text-align: left;
+         }
+         button {
+           @include buttonsBlog();
+           width: 25%;
+           text-align: center;
+         }
+      
+      }
+    }
+
+  }
+  #wrap-img-see-more-offer {
+    @include text-style();
+ 
+    button {
+      width: 100%;
+      padding: 0.4rem;
+      font-size: 1.6rem;
+      background-color: $contrast-color;
+      a {color: $white-color;}
+    }
+  }
+}
+
 
 /** ----- PIE DE PAGINA -------- */
-
 footer#footer {
   @include text-style();
   margin-bottom: $hamburguer-menu-height;
@@ -444,6 +553,7 @@ footer#footer {
           display: flex;
           justify-content: center;
           align-items: center;
+          img { width: 30%;}
         }
       }
     
@@ -462,23 +572,16 @@ footer#footer {
       grid-template-columns: 1fr;
       text-align: center;
 
-      .fa-facebook {
-        color: $facebook-icon-color;
-      }
-
-      .fa-whatsapp {
-        color: $whatsapp-icon-color;
-      }
     }
     img {
       width: 70%;
     }
   }
 }
-
-
 /*********************************/
 
+
+/************* VISTA ESCRITORIO  ***************/
 @media (min-width: 768px) {
   :root {
     font-size: 16px;
@@ -543,6 +646,7 @@ footer#footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  //CLUB SECTION
   #club-section {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -560,6 +664,7 @@ footer#footer {
 
   }// Fin de la seccion del club
 
+  //GALERY SECTION
   #gallery-section{
     #gallery-mobile {
       display: none;
@@ -594,6 +699,63 @@ footer#footer {
     }
   } //Fin de la seccion de la galeria y fotos
 
+  //EVENT SECTION
+  #events-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+          "etl etl etl etl etl"
+          "ecl ecl nws nws nws";
+    grid-gap: 2rem;
+
+    h1 {grid-area: etl; }
+    #wrap-event-calendar {grid-area: ecl;}
+    #wrap-news {grid-area: nws; }
+
+  }
+
+  //CONTACT SECTION
+  #contact-section {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "cnt cnt"
+                          " imc frm";
+
+    grid-gap: 2rem;
+
+    h1 {grid-area: cnt; }
+    #wrap-img-contact {
+      display: block;
+      grid-area: imc;
+
+      img {width: 100%; height: 100%; object-fit: cover; }
+    }
+    form {grid-area: frm; }
+
+  }
+
+  //OFFERS SECTION 
+  section#offers-section {
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "ttloff ttloff ttloff ttloff ttloff"
+                          "imoff imoff cnoff cnoff cnoff"
+                          "imoff imoff smoreoff smoreoff smoreoff";
+
+    h1 {grid-area: ttloff; }
+    #wrap-desktop-img-offer {
+      display: block;
+      grid-area: imoff;
+      img { width: 100%; height: 100%; object-fit: cover;}
+    }
+    #wrap-offers {
+      grid-area: cnoff;
+      .offer {h4 { @include text-style(); font-size: 2rem;}}
+    }
+    #wrap-img-see-more-offer {grid-area: smoreoff; }
+  }
+
   //FOOTER
   footer#footer {
     margin-bottom: 0;
@@ -615,3 +777,4 @@ footer#footer {
     }
   }
 }
+/*********************************/

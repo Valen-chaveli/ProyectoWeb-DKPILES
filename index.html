@@ -7,7 +7,7 @@
     <meta name="keywords" content="kitesurf, club, surf, playa, surfing"/>
     <meta name="author" content="Valentin Chaveli Moreno" />
     <title>DK PILES</title>
-
+    
     <!--ICONO WEB-->
     <link rel="shortcut icon" href="./assets/img/iconoWeb.ico" />
 
@@ -16,17 +16,35 @@
     <link rel="stylesheet" href="./assets/style/fonts.css">
     <link rel="stylesheet" href="./assets/style/style.css">
 
-    <!-- LIBRERIAS ICONOS -->
+    <!-- LIBRERIAS Y ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" />
-    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   
-    
+    <script id="widg" src="http://www.windguru.cz/js/wgs_widget.php"></script>
 </head>
 <body id="inicio">
-    <!----------------- CABECERA/ MENU PARA ESCRITORIO -------------->
+    <!---------------- BANNER DE COOKIES ------------------>
+    <div id="cookiesBanner">
+        <p>
+            El acceso a este Sitio Web puede implicar 
+            la utilización de cookies. Las cookies son 
+            pequeñas cantidades de información que se 
+            almacenan en el navegador utilizado por
+            cada Usuario —en los distintos dispositivos 
+            que pueda utilizar para navegar— para que el 
+            servidor recuerde cierta información que posteriormente
+            y únicamente el servidor que la implementó leerá.
+            Las cookies facilitan la navegación, la hacen más amigable, 
+            y no dañan el dispositivo de navegación.
+        </p>
+        <p>
+            <input type="button" value="Aceptar" onclick="hideCookies();"/> 
+        </p>
+    </div>
+    <!------------------ FIN BANNER DE COOKIES ------------>
+    <!--------------- CABECERA/ MENU PARA ESCRITORIO ------>
     <header id="header">
         <div id="wrap-logo">
             <img src="./assets/img/iconoWeb.png" alt="DK PILES">
@@ -49,11 +67,11 @@
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                         Eventos
                     </a>
-                    <a href="#contacto" class="item-desktop">
+                    <a href="#contact-section" class="item-desktop">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                         Contacto
                     </a>
-                    <a href="#ofertas" class="item-desktop">
+                    <a href="#offers-section" class="item-desktop">
                         <i class="fa fa-address-card" aria-hidden="true"></i>
                         Ofertas
                     </a>
@@ -85,10 +103,10 @@
                 <a href="#events-section">Noticias y eventos</a>
             </span>
             <span class="wrap-item">
-                <a href="#contacto">Contacto</a>
+                <a href="#contact-section">Contacto</a>
             </span>
             <span class="wrap-item">
-                <a href="#ofertas">Ofertas</a>
+                <a href="#offers-section">Ofertas</a>
             </span>
         </div>
     </nav>
@@ -109,6 +127,7 @@
         <!------- SECCION INFORMACION METEOROLOGICA --------->
         <section id="info-meteo-section" class="info">
             <h1>Información meteorológica</h1>
+            <div id="wgs_widget_51_1403353076147"></div> 
             <div id="wrap-meteo">
                 <script id="wg_fwdg_504236_100_1612016459235" src="./assets/js/infoMeteo.js">
                 </script>
@@ -200,10 +219,9 @@
         </section> <!-- FIN SECCION INFORMACION WEBCAMS-->
     </main> <!------------ FIN SECCION PRINCIPAL -------------->
     
-
     <!------------ SECCION DEL CLUB -------------------->
-    <section id="club-section">
-        <h1>El club</h1>
+    <section id="club-section" class="wow ">
+        <h1 class="wow bounceInDown" data-wow-duration="1s">El club</h1>
         <div id="wrap-img">
             <img src="./assets/img/club-img.jpg" alt="">
         </div>
@@ -224,6 +242,15 @@
                 <li>Isaac Parres Prefasi</li>
             </ul>
 
+            <p>Tambien guardamos especial cariño a los miembros de la antigua directiva compuesta por:</p>
+            
+            <ul>
+                <li>Miquel Mahiques</li>
+                <li>Loles Ponts</li>
+                <li>Fernando Pons</li>
+                <li>Ana Calabuig</li>
+                <li>Joel Ciscar</li>
+            </ul>
             <p>
                 A los que no tenemos mas que agradecimientos por su esfuerzo y dedicación.
             </p>
@@ -277,7 +304,7 @@
     <!-- SECCION DE LA GALERIA Y FOTOS -->
     <section id="gallery-section">
         <h1 class="wow bounceInDown" data-wow-duration="1s">Galeria</h1>
-        <div id="gallery-mobile" class="wow bounceInDown" data-wow-duration="1s">
+        <div id="gallery-mobile">
             <p>Se trata de todo el conjunto de fotos de grupo que hemos podido recopilar de los años previos a la web. Recogemos en un gran grupo de momentos divertidos e inolvidables desde que se los inicios del club hasta el final de la temporada 2012.</p>
         <div id="wrap-galley-mobile">
             <div class="swiper-container">
@@ -346,7 +373,7 @@
     <!-- SECCION DE NOTICIAS Y EVENTOS-->
     <section id="events-section">
 
-        <h1>Noticias y Enventos</h1>
+        <h1 class="wow bounceInDown" data-wow-duration="1s">Noticias y Eventos</h1>
 
         <div id="wrap-event-calendar">
             <h2>Próximos eventos</h2>
@@ -354,7 +381,7 @@
         </div>
 
         <div id="wrap-news">
-            <h2>Noticias kitesurf</h2>
+            <h2>Blogs y Noticias kitesurf</h2>
             <div class="blog-new"> <!-- Noticia/blog 1-->
                 <div class="wrap-img-blog">
                     <img src="./assets/img/blog-fotos/beauduc-kitesurfing.jpg" alt="">
@@ -364,6 +391,7 @@
                     <p> 
                        Para iniciarnos al estilo New School de Kitesurf aprenderemos primero el Raley. 
                     </p>
+                    <button>Leer Blog</button>
                 </div>
             </div> <!-- Fin noticia/blog1-->
 
@@ -376,6 +404,7 @@
                     <p> 
                         Intentaremos en éste artículo mejorar o aprender a ceñir en kitesurf, una maniobra básica que a veces cuesta de interpretar.
                     </p>
+                    <button>Leer Blog</button>
                 </div>
             </div> <!-- Fin noticia/blog2-->
 
@@ -388,11 +417,85 @@
                     <p> 
                         Vamos a aprender los primeros pasos para surfear con nuestra cometa de kitesurf
                     </p>
+                    <button>Leer Blog</button>
                 </div>
             </div> <!-- Fin noticia/blog3-->
 
         </div>
+    </section> <!-- FIN SECCION NOTICIAS Y EVENTOS-->
+    <section id="contact-section">
+        <h1 class="wow bounceInDown" data-wow-duration="1s">Contacta con nosotros</h1>
+
+        <div id="wrap-img-contact">
+            <img src="./assets/img/contacto.jpg" alt="">
+        </div>
+
+        <form action="#" method="POST">
+            <p>
+                <input type="text" name="nombre" id="nombre" placeholder=" Escribe tu nombre*...">
+            </p>
+            <p>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Escribe tus apellidos...">
+            </p>
+            <p>
+                <input type="email" name="email" id="email" placeholder="Escribe tu email*...">
+            </p>
+            <p>Escribe tu mensaje:</p>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10">
+
+            </textarea>
+
+            <p id="wrap-submit">
+                <input type="submit" value="Enviar">
+            </p>
+           
+        </form>
+
     </section>
+
+    <!---- SECCION DE OFERTAS Y MATERIAL DEPORTIVO --->
+    <section id="offers-section">
+        <h1 class="wow bounceInDown" data-wow-duration="1s">Ofertas material deportivo</h1>
+        <div id="wrap-desktop-img-offer">
+            <img src="./assets/img/materialDesktop.jpg" alt="">
+        </div>
+        <div id="wrap-offers">
+            <div class="offer">
+                <div class="img-offer">
+                    <img src="./assets/img/tablasurfoffer.jpg" alt="">
+                </div>
+                <div class="wrap-content-offer">
+                    <h4>Tabla de kitesurf</h4>
+                    <p>Diseñada para ofrecer versatilidad y una sensación amigable en todas las condiciones, la Native es una nueva tabla crossover construida alrededor de nuestro modelo Recoil.</p>
+                    <button>Ver</button>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="img-offer">
+                    <img src="./assets/img/kite6mts.jpg" alt="">
+                </div>
+                <div class="wrap-content-offer">
+                    <h4>Kite 6mts Airush2015/16</h4>
+                    <p>Kite 8mts 2013, Tabla y arnes talle L en bue s estado !!!</p>
+                    <button>Ver</button>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="img-offer">
+                    <img src="./assets/img/COMETA.jpg" alt="">
+                </div>
+                <div class="wrap-content-offer">
+                    <h4>AIRUSH RAZOR TEAM BLACK 7M 2018</h4>
+                    <p>Es una cometa liviana de un solo puntal que tiene increíbles capacidades de relanzamiento. Hecho con componentes livianos y tela D4 duradera, mantiene el One sorprendentemente liviano en el aire y perdona en la barra.</p>
+                    <button>Ver</button>
+                </div>
+            </div>
+        </div>
+        <div id="wrap-img-see-more-offer">
+            <button><a href="https://www.facebook.com/groups/kitesurf.2amano/" target="_blank">Ver mas en </a><i class="fa fa-facebook"></i> </button>
+        </div>
+    </section>
+    <!-- FIN DE LA SECCION DE OFERTAS-->
 
     <!------- PIE DE PAGINA --------->
     <footer id="footer">
@@ -406,10 +509,10 @@
                         <img src="./assets/img/espana.svg" alt="">
                     </div>
                     <div id="valencia">
-                        <img src="./assets/img/idioma-en-ingles.svg" alt="">
+                        <img src="./assets/img/512px-Flag_of_the_Valencian_Community_(2x3).svg.png" alt="">
                     </div>
                     <div id="ingles">
-                        <img src="./assets/img/512px-Flag_of_the_Valencian_Community_(2x3).svg.png" alt="">
+                        <img src="./assets/img/banderaInglesss.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -425,6 +528,9 @@
     <!-- FIN DEL PIE DE PAGINA-->
 
     <!-- SCRIPTS -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/cookies.js"></script>
+    <script src="./assets/js/estation.js"></script>
     <script src="./assets/js/webcamGandia.js"></script>
     <script src="./assets/js/webcamOliva.js"></script>
     <script type="text/javascript" src="./assets/js/webcam.js"></script>
