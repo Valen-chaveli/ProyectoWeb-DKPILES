@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 $first-color:#66A5AD;
 $first-alpha-color:rgba(102, 165, 173, 0.75);
 $second-alpha-color:rgba(7, 87, 91, 0.75);
@@ -98,17 +97,13 @@ body {scroll-snap-type: y mandatory;}
     font-size: 1.2rem;
     letter-spacing: 2px;
 
-    &:hover{
-      background-color: $first-alpha-color;
-    }
+    &:hover{background-color: $first-alpha-color;}
    }
 }
 
 a {
   color: black;
-  &:active, &:link {
-    color: black;
-  }
+  &:active, &:link {color: black;}
 }
 
 //Colores de las redes sociales
@@ -505,6 +500,8 @@ section#offers-section {
            @include buttonsBlog();
            width: 25%;
            text-align: center;
+
+           a {display: block; width: 100%; }
          }
       
       }
@@ -517,9 +514,9 @@ section#offers-section {
     button {
       width: 100%;
       padding: 0.4rem;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       background-color: $contrast-color;
-      a {color: $white-color;}
+      a {color: $white-color; }
     }
   }
 }

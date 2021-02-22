@@ -570,6 +570,10 @@ section#offers-section #wrap-offers .offer .wrap-content-offer button:hover {
   background-color: #d46a1b;
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
 }
+section#offers-section #wrap-offers .offer .wrap-content-offer button a {
+  display: block;
+  width: 100%;
+}
 section#offers-section #wrap-img-see-more-offer {
   font-family: "Helvetica";
   line-height: 1.5;
@@ -579,7 +583,7 @@ section#offers-section #wrap-img-see-more-offer {
 section#offers-section #wrap-img-see-more-offer button {
   width: 100%;
   padding: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   background-color: #E6853C;
 }
 section#offers-section #wrap-img-see-more-offer button a {
