@@ -10,4 +10,4 @@ function llamarWidget() {
   });
 }
 llamarWidget();
-setInterval(llamarWidget, 60000); /* Quitar si no queréis que actualice */
+setInterval(llamarWidget, 60000);

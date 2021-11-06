@@ -30,14 +30,27 @@ body {
   background-color: #E6853C;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 1.2rem;
   opacity: 1;
   z-index: 60000;
+ 
 }
+
+@keyframes cookieBannerAppear {
+
+  from {
+
+  }
+  to {}
+  
+}
+
 #cookiesBanner p {
   margin-bottom: 1rem;
 }
 #cookiesBanner input {
+
+  cursor: pointer;
   padding: 0.5rem;
   background-color: #66A5AD;
   font-size: 1.2rem;
@@ -169,7 +182,7 @@ a:active, a:link {
   text-shadow: 1px 1px 5px black;
   scroll-snap-align: center;
 }
-#wrap-message span {
+#wrap-message .title-club {
   color: #E6853C;
   text-shadow: 1px 0px 1px black;
 }

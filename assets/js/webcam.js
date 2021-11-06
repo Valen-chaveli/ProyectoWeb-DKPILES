@@ -1,7 +1,4 @@
-/* Cambiad URL de la cámara */
 var pathPiles = 'http://turiscam.comunitatvalenciana.com/piles.jpg';
-
-/****************************/
 
 var image_to_refresh = 0;
 
@@ -42,7 +39,7 @@ function update_zindex(image_to_refresh) {
   imag.style.display = 'inline';
   hora_actual();
 }
-/* MAIN */
+
 document.querySelector('img#popimage0').style.display = 'inline';
 
 refresh_imagePiles(0);

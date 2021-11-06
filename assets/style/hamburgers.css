@@ -1,10 +1,3 @@
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -55,9 +48,6 @@
   .hamburger-inner::after {
     bottom: -10px; }
 
-/*
-   * 3DX
-   */
 .hamburger--3dx .hamburger-box {
   perspective: 80px; }
 
@@ -74,9 +64,7 @@
   .hamburger--3dx.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * 3DX Reverse
-   */
+
 .hamburger--3dx-r .hamburger-box {
   perspective: 80px; }
 
@@ -93,9 +81,7 @@
   .hamburger--3dx-r.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * 3DY
-   */
+
 .hamburger--3dy .hamburger-box {
   perspective: 80px; }
 
@@ -112,9 +98,6 @@
   .hamburger--3dy.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * 3DY Reverse
-   */
 .hamburger--3dy-r .hamburger-box {
   perspective: 80px; }
 
@@ -131,9 +114,6 @@
   .hamburger--3dy-r.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * 3DXY
-   */
 .hamburger--3dxy .hamburger-box {
   perspective: 80px; }
 
@@ -150,9 +130,7 @@
   .hamburger--3dxy.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * 3DXY Reverse
-   */
+
 .hamburger--3dxy-r .hamburger-box {
   perspective: 80px; }
 
@@ -169,27 +147,21 @@
   .hamburger--3dxy-r.is-active .hamburger-inner::after {
     transform: translate3d(0, -10px, 0) rotate(-45deg); }
 
-/*
-   * Arrow
-   */
+
 .hamburger--arrow.is-active .hamburger-inner::before {
   transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
 
 .hamburger--arrow.is-active .hamburger-inner::after {
   transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
 
-/*
-   * Arrow Right
-   */
+
 .hamburger--arrow-r.is-active .hamburger-inner::before {
   transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
 
 .hamburger--arrow-r.is-active .hamburger-inner::after {
   transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
 
-/*
-   * Arrow Alt
-   */
+
 .hamburger--arrowalt .hamburger-inner::before {
   transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
@@ -206,9 +178,7 @@
   transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
   transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
 
-/*
-   * Arrow Alt Right
-   */
+
 .hamburger--arrowalt-r .hamburger-inner::before {
   transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
@@ -225,9 +195,7 @@
   transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
   transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
 
-/*
-   * Arrow Turn
-   */
+
 .hamburger--arrowturn.is-active .hamburger-inner {
   transform: rotate(-180deg); }
   .hamburger--arrowturn.is-active .hamburger-inner::before {
@@ -235,9 +203,7 @@
   .hamburger--arrowturn.is-active .hamburger-inner::after {
     transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
 
-/*
-   * Arrow Turn Right
-   */
+
 .hamburger--arrowturn-r.is-active .hamburger-inner {
   transform: rotate(-180deg); }
   .hamburger--arrowturn-r.is-active .hamburger-inner::before {
@@ -245,9 +211,7 @@
   .hamburger--arrowturn-r.is-active .hamburger-inner::after {
     transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
 
-/*
-   * Boring
-   */
+
 .hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {
   transition-property: none; }
 
@@ -260,9 +224,7 @@
     bottom: 0;
     transform: rotate(-90deg); }
 
-/*
-   * Collapse
-   */
+
 .hamburger--collapse .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -288,9 +250,7 @@
     transform: rotate(-90deg);
     transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Collapse Reverse
-   */
+
 .hamburger--collapse-r .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -316,9 +276,7 @@
     transform: rotate(90deg);
     transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Elastic
-   */
+
 .hamburger--elastic .hamburger-inner {
   top: 2px;
   transition-duration: 0.275s;
@@ -340,9 +298,7 @@
     transform: translate3d(0, -20px, 0) rotate(-270deg);
     transition-delay: 0.075s; }
 
-/*
-   * Elastic Reverse
-   */
+
 .hamburger--elastic-r .hamburger-inner {
   top: 2px;
   transition-duration: 0.275s;
@@ -364,9 +320,7 @@
     transform: translate3d(0, -20px, 0) rotate(270deg);
     transition-delay: 0.075s; }
 
-/*
-   * Emphatic
-   */
+
 .hamburger--emphatic {
   overflow: hidden; }
   .hamburger--emphatic .hamburger-inner {
@@ -393,9 +347,7 @@
       transform: translate3d(-80px, 80px, 0) rotate(-45deg);
       transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-/*
-   * Emphatic Reverse
-   */
+
 .hamburger--emphatic-r {
   overflow: hidden; }
   .hamburger--emphatic-r .hamburger-inner {
@@ -422,9 +374,7 @@
       transform: translate3d(-80px, -80px, 0) rotate(45deg);
       transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-/*
-   * Minus
-   */
+
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
@@ -438,9 +388,7 @@
 .hamburger--minus.is-active .hamburger-inner::after {
   bottom: 0; }
 
-/*
-   * Slider
-   */
+
 .hamburger--slider .hamburger-inner {
   top: 2px; }
   .hamburger--slider .hamburger-inner::before {
@@ -459,9 +407,7 @@
   .hamburger--slider.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
 
-/*
-   * Slider Reverse
-   */
+
 .hamburger--slider-r .hamburger-inner {
   top: 2px; }
   .hamburger--slider-r .hamburger-inner::before {
@@ -480,9 +426,7 @@
   .hamburger--slider-r.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(90deg); }
 
-/*
-   * Spin
-   */
+
 .hamburger--spin .hamburger-inner {
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
@@ -504,9 +448,7 @@
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Spin Reverse
-   */
+
 .hamburger--spin-r .hamburger-inner {
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
@@ -528,9 +470,7 @@
     transform: rotate(90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Spring
-   */
+
 .hamburger--spring .hamburger-inner {
   top: 2px;
   transition: background-color 0s 0.13s linear; }
@@ -553,9 +493,7 @@
     transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, 10px, 0) rotate(-45deg); }
 
-/*
-   * Spring Reverse
-   */
+
 .hamburger--spring-r .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -581,9 +519,7 @@
     transform: rotate(90deg);
     transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Stand
-   */
+
 .hamburger--stand .hamburger-inner {
   transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
   .hamburger--stand .hamburger-inner::before {
@@ -604,9 +540,7 @@
     transform: rotate(45deg);
     transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Stand Reverse
-   */
+
 .hamburger--stand-r .hamburger-inner {
   transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
   .hamburger--stand-r .hamburger-inner::before {
@@ -627,9 +561,7 @@
     transform: rotate(45deg);
     transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Squeeze
-   */
+
 .hamburger--squeeze .hamburger-inner {
   transition-duration: 0.075s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
@@ -651,9 +583,7 @@
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-/*
-   * Vortex
-   */
+
 .hamburger--vortex .hamburger-inner {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
@@ -678,9 +608,7 @@
     bottom: 0;
     transform: rotate(90deg); }
 
-/*
-   * Vortex Reverse
-   */
+
 .hamburger--vortex-r .hamburger-inner {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }

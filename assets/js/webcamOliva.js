@@ -1,7 +1,6 @@
-/* Cambiad URL de la cámara */
 var pathOliva =
   'http://turiscam.comunitatvalenciana.com/olivap.jpg?0.8272606303741428';
-/****************************/
+
 
 var oliva_image_to_refresh = 0;
 
@@ -50,7 +49,7 @@ function update_zindex(oliva_image_to_refresh) {
   imag.style.display = 'inline';
   hora_actual();
 }
-/* MAIN */
+
 document.querySelector('img#olivapopimage0').style.display = 'inline';
 
 refresh_imageOliva(0);

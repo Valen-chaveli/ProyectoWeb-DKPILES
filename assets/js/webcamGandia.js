@@ -47,7 +47,7 @@ function update_zindex(gandia_image_to_refresh) {
   imag.style.display = 'inline';
   hora_actual();
 }
-/* MAIN */
+
 document.querySelector('img#gandiapopimage0').style.display = 'inline';
 
 refresh_imageGandia(0);
